@@ -13,17 +13,18 @@ void Array(string[] arr1, string[] arr2)
       count++;
     }
   }
-  Console.WriteLine("[{0}]", string.Join(", ", arr1));
+  Console.Write("[{0}]", string.Join(", ", arr1));
+  Console.Write(" -> ");
 }
 
 void PrintArray(string[] array)
 {
   for (int i = 0; i < array.Length; i++)
   {
-
-    Console.Write($"{array[i]}");
+    if(i == 0) Console.Write("[");
+    if(i < array.Length - 1) Console.Write(array[i] + ", ");
+    else Console.Write(array[i] + "]");
   }
-  Console.WriteLine();
 }
 
 Array(arr1, arr2);
